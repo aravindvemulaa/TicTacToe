@@ -1,0 +1,109 @@
+     A*%%TS  SD  20250918  052343  VEMULA09    REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A          R TICTAC
+     A*%%TS  SD  20250918  052343  VEMULA09    REL-V7R5M0  5770-WDS
+     A                                      CF12(12 'Cancel')
+     A                                      CF05(05 'Restart Game')
+     A                                      RTNCSRLOC(&RCD &FLD &POS)
+     A                                      OVERLAY
+     A            FLD           10A  H
+     A            RCD           10A  H
+     A            POS            4S 0H
+     A                                  1  2USER
+     A                                  1 35'Tic Tac Toe'
+     A                                      COLOR(RED)
+     A                                  1 70DATE
+     A                                      EDTCDE(Y)
+     A                                  2 70TIME
+     A                                  3 12'Player_1'
+     A                                  3 29'Player_2'
+     A                                  7 27'*-----------------------*'
+     A                                  8 27'!'
+     A                                  8 35'!'
+     A                                  8 43'!'
+     A                                  8 51'!'
+     A                                  9 27'!'
+     A                                  9 35'!'
+     A                                  9 43'!'
+     A                                  9 51'!'
+     A                                 10 27'!'
+     A                                 10 35'!'
+     A                                 10 43'!'
+     A                                 10 51'!'
+     A                                 11 27'*-----------------------*'
+     A                                 12 27'!'
+     A                                 12 35'!'
+     A                                 12 43'!'
+     A                                 12 51'!'
+     A                                 13 27'!'
+     A                                 13 35'!'
+     A                                 13 43'!'
+     A                                 13 51'!'
+     A                                 14 27'!'
+     A                                 14 35'!'
+     A                                 14 43'!'
+     A                                 14 51'!'
+     A                                 16 35'!'
+     A                                 16 43'!'
+     A                                 17 35'!'
+     A                                 17 43'!'
+     A                                 18 35'!'
+     A                                 18 43'!'
+     A                                 19 27'*-----------------------*'
+     A                                 15 27'*-----------------------*'
+     A                                 16 27'!'
+     A                                 16 51'!'
+     A                                 17 27'!'
+     A                                 17 51'!'
+     A                                 18 27'!'
+     A                                 18 51'!'
+     A            LT             1A  B  9 31COLOR(WHT)
+     A  25                                  DSPATR(PR)
+     A            MT             1A  B  9 39COLOR(WHT)
+     A  28                                  DSPATR(PR)
+     A            RT             1A  B  9 47COLOR(WHT)
+     A  31                                  DSPATR(PR)
+     A            LM             1A  B 13 31COLOR(WHT)
+     A  26                                  DSPATR(PR)
+     A            MM             1A  B 13 39COLOR(WHT)
+     A  29                                  DSPATR(PR)
+     A            RM             1A  B 13 47COLOR(WHT)
+     A  32                                  DSPATR(PR)
+     A            LB             1A  B 17 31COLOR(WHT)
+     A  27                                  DSPATR(PR)
+     A            MB             1A  B 17 39COLOR(WHT)
+     A  30                                  DSPATR(PR)
+     A            RB             1A  B 17 47COLOR(WHT)
+     A  33                                  DSPATR(PR)
+     A                                 23  4'F12 = Cancel Game'
+     A                                      COLOR(PNK)
+     A            MSG           50A  O  5 27COLOR(PNK)
+     A            FAILMSG       55A  O 21  7COLOR(WHT)
+     A                                  3 21':'
+     A            FLD001         1A  O  3 23COLOR(BLU)
+     A                                  3 38':'
+     A            FLD002         1A  O  3 40COLOR(BLU)
+     A                                 23 24'F5 = Restart Game'
+     A                                      COLOR(PNK)
+     A          R PLYSLCTN
+     A*%%TS  SD  20250917  073625  VEMULA09    REL-V7R5M0  5770-WDS
+     A                                      CF12(12 'Cancel')
+     A                                      CA03(03 'Exit')
+     A                                  8 24'Player_1'
+     A                                  8 33':'
+     A            FLD001         1A  B  8 35
+     A                                  8 47'(choose'
+     A                                  8 55'your'
+     A                                  8 60'Char'
+     A                                  8 65'X'
+     A                                  8 67'or'
+     A                                  8 70'O)'
+     A                                 11 24'Player2'
+     A                                 11 33':'
+     A            FLD002         1A  B 11 35
+     A                                 21  7'F3=Exit'
+     A                                      COLOR(PNK)
+     A                                 21 20'F12=Cancel'
+     A                                      COLOR(PNK)
+     A            ERRMSG        40A  O 18 10COLOR(RED)
