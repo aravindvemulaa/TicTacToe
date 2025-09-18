@@ -69,8 +69,7 @@ The UI defined in TICTACD will guide play. Use the on‑screen prompts to select
 ## How it works
 
 - Game logic: Implemented in [tictacr.rpgle](https://github.com/aravindvemulaa/TicTacToe/blob/main/tictacr.rpgle) (ILE RPG).
-## *** Make sure that when you input your choice (X or O), the cursor is positioned in the field where you are entering the value. Otherwise, an error will occur. Since in a display   
-  file, we retain the cursor position in this way and logic is implemented based on that.
+## *** Make sure that when you input your choice (X or O), the cursor is positioned in the field where you are entering the value. Otherwise, an error will occur. Since in a display   file, we retain the cursor position in this way and logic is implemented based on that.
 - UI: Screen layout, fields, and any function keys are defined in [tictacd.dspf](https://github.com/aravindvemulaa/TicTacToe/blob/main/tictacd.dspf), compiled into display file TICTACD.
 
 ## Development tips
